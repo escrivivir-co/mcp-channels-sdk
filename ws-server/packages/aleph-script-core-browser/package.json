@@ -1,0 +1,42 @@
+{
+  "name": "@alephscript/core-browser",
+  "version": "1.1.0",
+  "description": "Universal browser client for AlephScript - framework agnostic socket.io wrapper. Types unified with @alephscript/mcp-core-sdk.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "tsc --build",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "pack": "npm run build && npm pack"
+  },
+  "keywords": [
+    "alephscript",
+    "socket.io",
+    "browser",
+    "websocket",
+    "real-time",
+    "client"
+  ],
+  "author": "AlephScript Team",
+  "license": "MIT",
+  "dependencies": {
+    "socket.io-client": "^4.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tslib": "^2.6.0",
+    "typescript": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/escrivivir-co/aleph-script-core-browser"
+  },
+  "bugs": {
+    "url": "https://github.com/escrivivir-co/aleph-script-core-browser/issues"
+  },
+  "homepage": "https://github.com/escrivivir-co/aleph-script-core-browser#readme"
+}

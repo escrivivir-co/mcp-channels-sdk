@@ -1,0 +1,36 @@
+{
+  "name": "socket-gym-monorepo",
+  "version": "1.1.0",
+  "description": "AlephScript Socket.IO library and demo application (types from @alephscript/mcp-core-sdk)",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "build:core-browser": "npm run build --workspace=packages/aleph-script-core-browser",
+    "build:angular": "npm run build --workspace=packages/aleph-script-angular",
+    "build:demo": "npm run build --workspace=packages/socket-gym-demo",
+    "dev": "npm run dev --workspace=packages/socket-gym-demo",
+    "dev:core-browser": "npm run dev --workspace=packages/aleph-script-core-browser",
+    "dev:angular": "npm run dev --workspace=packages/aleph-script-angular",
+    "pack:core-browser": "npm run pack --workspace=packages/aleph-script-core-browser",
+    "pack:angular": "npm run pack --workspace=packages/aleph-script-angular",
+    "pack_browser_client_for_install": "bash scripts/pack-for-dist.sh",
+    "clean": "npm run clean --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present"
+  },
+  "devDependencies": {
+    "tsx": "^4.15.1",
+    "typescript": "^5.4.5"
+  },
+  "author": "Gonzalo Bechara Baladi",
+  "license": "ISC",
+  "keywords": [
+    "socket.io",
+    "websockets",
+    "real-time",
+    "typescript",
+    "monorepo"
+  ]
+}

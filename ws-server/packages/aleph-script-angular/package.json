@@ -1,0 +1,32 @@
+{
+  "name": "@alephscript/angular",
+  "version": "1.1.0",
+  "description": "Angular integration for AlephScript - RxJS-powered reactive client. Types unified with @alephscript/mcp-core-sdk.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "alephscript",
+    "angular",
+    "rxjs",
+    "websocket",
+    "real-time",
+    "reactive"
+  ],
+  "author": "AlephScript Team",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc --build",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist"
+  },
+  "peerDependencies": {
+    "@alephscript/core-browser": "^1.1.0",
+    "@angular/core": "^17.0.0 || ^18.0.0 || ^19.0.0 || ^20.0.0",
+    "rxjs": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "rxjs": "^7.8.0",
+    "typescript": "^5.0.0"
+  }
+}

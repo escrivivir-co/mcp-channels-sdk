@@ -21,7 +21,11 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist",
-    "rootDir": "./src"
+    "rootDir": "./src",
+    "baseUrl": ".",
+    "paths": {
+      "@alephscript/mcp-core-sdk/*": ["../../../../mcp-core-sdk/src/*"]
+    }
   },
   "include": [
     "src/**/*"

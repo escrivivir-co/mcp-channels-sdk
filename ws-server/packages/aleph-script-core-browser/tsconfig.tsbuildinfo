@@ -1,0 +1,1 @@
+{"root":["./src/index.ts","./src/types.ts","./src/utils.ts","./src/client/alephscriptclient.ts","./src/client/socketclient.ts","./src/client/index.ts","./src/events/alepheventemitter.ts","./src/events/index.ts"],"version":"5.9.3"}

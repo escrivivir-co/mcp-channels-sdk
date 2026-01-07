@@ -1,7 +1,8 @@
 import express, { Application } from 'express'
 import { createServer } from 'node:http';
-import { AlephScriptServer, AlephScriptClient } from '@alephscript/mcp-core-sdk';
+import { AlephScriptServer, AlephScriptClient, SocketServer } from '@alephscript/mcp-core-sdk';
 import cors from 'cors';
+import { SocketIoMesh } from './SocketIoMesh';
 
 const app: Application = express();
 const corsOptions = {
@@ -11,17 +12,22 @@ const corsOptions = {
     credentials: true
 };
 app.use(cors(corsOptions));
+app.use(express.json()); // For POST body parsing
 
 const server = createServer(app);
 
 // Usar la librería AlephScript
 const as = new AlephScriptServer(server);
 
+// Create mesh orchestration layer
+const mesh = new SocketIoMesh(as as unknown as SocketServer, app);
+
 const PORT = 3010;
 server.listen(PORT, ()=> {
 
 	console.log(`🚀 Socket Gym Demo - Server escuchando en el puerto ${PORT}`);
 	console.log("📦 Usando @alephscript/mcp-core-sdk library");
+	console.log(`🕸️  Mesh API disponible en http://localhost:${PORT}/mesh`);
 
 	// Crear clientes usando la librería
 	const asCli = new AlephScriptClient("SERVER_cRUNTIME", `http://localhost:${PORT}`, "/runtime");

@@ -21,9 +21,11 @@
     ],
     "skipLibCheck": true,
     "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "paths": {
       "@alephscript/core-browser": [
-        "../aleph-script-core-browser/src"
+        "../aleph-script-core-browser/dist"
       ]
     }
   },

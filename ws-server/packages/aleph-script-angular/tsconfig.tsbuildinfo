@@ -1,0 +1,1 @@
+{"root":["./src/public-api.ts","./src/lib/alephscript.module.ts","./src/lib/alephscript.service.ts","./src/lib/rxjs-socket-bridge.service.ts","./src/lib/types.ts","./src/lib/components/connection-status.component.ts","./src/lib/components/index.ts","./src/lib/components/message-display.component.ts"],"version":"5.9.3"}

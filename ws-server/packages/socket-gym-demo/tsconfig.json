@@ -15,6 +15,8 @@
     "paths": {
       "@alephscript/core": ["../alephscript-core/src"],
       "@alephscript/core/*": ["../alephscript-core/src/*"],
+      "@alephscript/mcp-core-sdk": ["../../../../mcp-core-sdk/dist"],
+      "@alephscript/mcp-core-sdk/*": ["../../../../mcp-core-sdk/dist/*"],
       "@/*": ["src/*"]
     }
   },

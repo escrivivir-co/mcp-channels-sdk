@@ -1,11 +1,22 @@
 {
   "name": "@alephscript/angular",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Angular integration for AlephScript - RxJS-powered reactive client. Types unified with @alephscript/mcp-core-sdk.",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "module": "dist/fesm2022/alephscript-angular.mjs",
+  "typings": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/fesm2022/alephscript-angular.mjs"
+    },
+    "./package.json": {
+      "default": "./package.json"
+    }
+  },
   "files": [
-    "dist/"
+    "dist",
+    "README.md"
   ],
   "keywords": [
     "alephscript",
@@ -32,22 +43,28 @@
     "registry": "https://npm.scriptorium.escrivivir.co"
   },
   "scripts": {
-    "build": "tsc --build",
-    "dev": "tsc --watch",
-    "clean": "rm -rf dist",
+    "build": "ng-packagr -p ng-package.json",
+    "dev": "ng-packagr -p ng-package.json --watch",
+    "clean": "rm -rf dist out-tsc",
     "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
     "@alephscript/core-browser": "^1.2.0",
+    "@angular/common": "^17.0.0 || ^18.0.0 || ^19.0.0 || ^20.0.0",
     "@angular/core": "^17.0.0 || ^18.0.0 || ^19.0.0 || ^20.0.0",
     "rxjs": "^7.0.0"
   },
+  "dependencies": {
+    "tslib": "^2.6.0"
+  },
   "devDependencies": {
     "@alephscript/core-browser": "file:../aleph-script-core-browser",
-    "@angular/common": "^17.0.0",
-    "@angular/core": "^17.0.0",
+    "@angular/common": "^20.2.3",
+    "@angular/compiler-cli": "^20.2.3",
+    "@angular/core": "^20.2.3",
     "@types/node": "^20.0.0",
+    "ng-packagr": "^20.2.0",
     "rxjs": "^7.8.0",
-    "typescript": "^5.0.0"
+    "typescript": "~5.8.2"
   }
 }

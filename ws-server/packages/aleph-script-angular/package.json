@@ -4,6 +4,9 @@
   "description": "Angular integration for AlephScript - RxJS-powered reactive client. Types unified with @alephscript/mcp-core-sdk.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
   "keywords": [
     "alephscript",
     "angular",
@@ -12,12 +15,27 @@
     "real-time",
     "reactive"
   ],
-  "author": "AlephScript Team",
+  "author": {
+    "name": "AlephScript Ops",
+    "email": "ops@escrivivir.co",
+    "url": "https://escrivivir.co"
+  },
+  "maintainers": [
+    {
+      "name": "AlephScript Ops",
+      "email": "ops@escrivivir.co",
+      "url": "https://escrivivir.co"
+    }
+  ],
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.scriptorium.escrivivir.co"
+  },
   "scripts": {
     "build": "tsc --build",
     "dev": "tsc --watch",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
     "@alephscript/core-browser": "^1.2.0",

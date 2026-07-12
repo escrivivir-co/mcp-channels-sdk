@@ -11,7 +11,8 @@
     "build": "tsc --build",
     "dev": "tsc --watch",
     "clean": "rm -rf dist",
-    "pack": "npm run build && npm pack"
+    "pack": "npm run build && npm pack",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "alephscript",
@@ -21,10 +22,24 @@
     "real-time",
     "client"
   ],
-  "author": "AlephScript Team",
+  "author": {
+    "name": "AlephScript Ops",
+    "email": "ops@escrivivir.co",
+    "url": "https://escrivivir.co"
+  },
+  "maintainers": [
+    {
+      "name": "AlephScript Ops",
+      "email": "ops@escrivivir.co",
+      "url": "https://escrivivir.co"
+    }
+  ],
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.scriptorium.escrivivir.co"
+  },
   "dependencies": {
-    "@alephscript/mcp-core-sdk": "^1.3.0",
+    "@alephscript/mcp-core-sdk": "^1.5.0",
     "socket.io-client": "^4.7.0"
   },
   "devDependencies": {
